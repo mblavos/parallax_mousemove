@@ -1,0 +1,52 @@
+<doctype=HTML>
+<head>
+</head>
+<body>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="mouse.parallax.js"></script>
+	<style type="text/css">
+#layer-one {
+    background-image: url('hero_bg_1.jpg');
+    width:2000px;
+	height:1335px;
+
+}
+#layer-two {
+	background-image: url('layer2.png');
+	width:2000px;
+	height:1335px;
+
+}
+#layer-three{
+	background-image:url('layer3.png');
+	width:2000px;
+	height:1335px;
+
+}
+
+.mouse-bg {
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	position: fixed;
+	z-index: -1;
+}
+</style>
+
+
+<script>
+$(document).ready(function() {
+$('#layer-one').mouseParallax({ moveFactor: 5 });
+$('#layer-two').mouseParallax({ moveFactor: 10 });
+$('#layer-three').mouseParallax({ moveFactor: 15 });
+$('body').height(3000);
+});
+</script>
+
+<div id="layer-one" class="mouse-bg"></div>
+<div id="layer-two" class="mouse-bg"></div>
+<div id="layer-three" class="mouse-bg"></div>
+
+
+</body>
